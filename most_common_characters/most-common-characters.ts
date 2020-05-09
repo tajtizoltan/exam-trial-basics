@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-let filePath: string = './countchar.txt';
+const FILE_PATH: string = './countchar.txt';
 
 function readFile(filePath: string) {
     let fileContent: string = '';
@@ -44,19 +44,19 @@ function countLetters (input: string): Map<string, number> {
 
 function twoMostCommonCharacters(charactersCounted: Map<string, number>): Map<string, number> {
     const twoMostCommon = new Map([...charactersCounted.entries()].sort((a, b) => b[1] - a[1])
-                                                             .slice(0, 2));
+                                                                  .slice(0, 2));
     
     return twoMostCommon;
 }
 
 function printMapOfTwoMostCommonCharacters(filePath: string): void {
-    let fileContent: string = readFile(filePath);
+    let fileContent = readFile(filePath);
     let charactersCounted = countLetters(fileContent);
     let finalMap = twoMostCommonCharacters(charactersCounted);
 
     console.log(finalMap);
 }
 
-printMapOfTwoMostCommonCharacters(filePath);
+printMapOfTwoMostCommonCharacters(FILE_PATH);
 
 export{}
