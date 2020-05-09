@@ -148,3 +148,6 @@ projects
 - Solution:
 
 *type your answer here*
+rm ./exam/data.txt ./program/data.txt
+mv. /program/assets/*.jpg ./exam/images
+mv ./program/assets/*.png ./exam/images
