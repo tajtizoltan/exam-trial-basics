@@ -25,8 +25,8 @@ test('The input is NOT a symmetric list', t => {
     // Arrange
     let inputList: number[][] = [
         [7, 7, 7],
-        [6, 5, 7],
-        [1, 2, 1]
+        [6, 4, 5],
+        [7, 5, 1]
       ];
 
     let expected: boolean = false;

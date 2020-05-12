@@ -7,16 +7,15 @@ let ourList: number[][] = [
 ];  
 
 export function isSymmetric (input: number[][]): boolean {
-    let buffer: boolean;
+    //let isSymmetricBuffer: boolean;
 
     for (let i: number = 0; i < input.length; i++) {
         if (input[i][i] === input[input.length - 1][i] && 
             input[i][i] === input[i][input.length - 1]) {
-                buffer = true;
-            } else buffer = false;
-            return buffer;
+                //isSymmetricBuffer = true;
+            } else return false;
     }
-    return buffer;
+    return true;
 }
 
 isSymmetric(ourList);
